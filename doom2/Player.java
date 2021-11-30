@@ -11,22 +11,11 @@ public class Player extends DoomCharacter {
         super(x, y);
         this.health = START_HEALTH;
     }
-
     public void attack(double strength) {
-
         this.health -= strength;
-
     }
     public boolean isDeath() {
-
-        boolean death;
-        if (this.health <= 0) {
-
-            death = true;
-        } else {
-            death = false;
-        }
-        return death;
+     return this.health <=0;
     }
 
     public double getHealth() {
@@ -36,7 +25,4 @@ public class Player extends DoomCharacter {
     public String toString() {
         return "P";
     }
-
-
-
 }
