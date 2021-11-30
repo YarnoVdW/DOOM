@@ -9,9 +9,9 @@ public class Zombie extends Monster{
 
 
     public enum ZombieStatus {
-        ALIVE("Z"), DEATH("+");
+        ALIVE(), DEATH();
 
-        ZombieStatus(String status) {
+        ZombieStatus() {
         }
     }
     private ZombieStatus status;
