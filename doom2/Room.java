@@ -22,24 +22,21 @@ public class Room {
     }
     public void makeMonsters() {
         for (int i = 0; i < 3; i++) {
-            monsters[i] = new Follower(random.nextInt(29), random.nextInt(29), player);
+            monsters[i] = new Follower(random.nextInt(29)+1, random.nextInt(29)+1, player);
             monsters[i].setRoom(this);
         }
         for (int i = 3; i < 8; i++) {
-            monsters[i] = new SimpleMonster(random.nextInt(29), random.nextInt(29),player );
+            monsters[i] = new SimpleMonster(random.nextInt(29)+1, random.nextInt(29)+1,player );
             monsters[i].setRoom(this);
         }
         for (int i =8; i< 11; i++) {
-            monsters[i] = new TimeBomb(random.nextInt(29), random.nextInt(29),player );
+            monsters[i] = new TimeBomb(random.nextInt(29)+1, random.nextInt(29)+1,player );
             monsters[i].setRoom(this);
         }
         for (int i =11; i< monsters.length; i++) {
-            monsters[i] = new Zombie(random.nextInt(29),random.nextInt(29), player );
+            monsters[i] = new Zombie(random.nextInt(29)+1,random.nextInt(29)+1, player );
             monsters[i].setRoom(this);
         }
-
-
-
     }
 
     private void createFloorplan() {
@@ -58,8 +55,6 @@ public class Room {
                 floorPlan[i][j] = ' ';
             }
         }
-
-
     }
 
     public void draw() {
@@ -83,8 +78,6 @@ public class Room {
         return player.isDeath();
 
     }
-
-
     public void update() {
         floorPlan[player.getX()][player.getY()] = ' ';
 
@@ -97,9 +90,6 @@ public class Room {
 
             floorPlan[monster.getX()][monster.getY()] = monster.toString().charAt(0);
         }
-
-
-
     }
 
     public be.kdg.doom2.Player getPlayer() {
