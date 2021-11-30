@@ -42,10 +42,8 @@ public class Doom {
             System.out.println("you survived: "+ seconden+ " seconds");
         }
     }
-
     private void showInfo() {
-
-        System.out.println("health: "+room.getPlayer().getHealth()+ "                 tijd: "+ LocalDateTime.now());
+        System.out.println("health: "+room.getPlayer().getHealth()+ "                 tijd: "+ LocalDate.now());
     }
 }
 
