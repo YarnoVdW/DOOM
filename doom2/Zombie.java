@@ -13,13 +13,10 @@ public class Zombie extends Monster{
 
         ZombieStatus(String status) {
         }
-
     }
     private ZombieStatus status;
 
     Random random = new Random();
-
-
 
     public Zombie(int x, int y, Player player) {
         super(x, y, player);
@@ -36,12 +33,10 @@ public class Zombie extends Monster{
                     status = DEATH;
                 }
             }
-
         }
         if (status == ALIVE) {
             super.move();
         }
-
     }
 
 
